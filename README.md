@@ -102,8 +102,7 @@ Ahí se está guardando el valor en otra variable (`x = i++`), ni multiplicando 
 ## Parte 2. Programación con IF
 
 ### Ejercicio 1. Sistema de Descuentos para un Supermercado
-![Evidenca Del Primer Ejercicio](<img width="808" height="500" alt="EvidenciaEjercicio1" src="https://github.com/user-attachments/assets/0e01e041-d305-4835-8b8a-07a74a720b62" />
-)
+![Evidenca Del Primer Ejercicio]()
 
 ### Ejercicio 2. Acceso a un Conjunto
 ![Evidenca Del Segundo Ejercicio](Evidencias/captura6.png)
