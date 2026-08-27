@@ -115,35 +115,37 @@ Ahí se está guardando el valor en otra variable (`x = i++`), ni multiplicando 
 ### Ejercicio 5. Siatema de viajes de una Aerolíena
 ![Evidenca Del  Quinto Ejercicio](Evidencias/captura9.png)
 
-**Nota para el docente:** Decidí no incluir capturas de pantalla de la terminal en cada ejercicio para mantener el documento limpio y ordenado ya que los programas tienen muchas combinaciones lógicas, poner una captura por cada caso haría el taller muy extenso, probe todo el código en NetBeans y funciona correctamente, ahora si explico la lógica de cada punto.
-
 ### Parte 3. Explicación de los resultados
 
 **Ejercicio 1: Descuentos en el Supermercado**
-Aquí usé la clase Scanner para pedir el valor de la compra en formato double. La lógica se basa en una estructura if else if que evalúa el monto para asignar un porcentaje de descuento. Si la compra es menor a 100000 no hay descuento, y los porcentajes suben progresivamente hasta el 20% para compras mayores a 500000. Al final el programa hace la multiplicación y muestra el total a pagar junto con el descuento aplicado.
+El ejercicio consiste en calcular el descuento de una compra según su valor. El programa recibe el precio ingresado por el usuario y utiliza if, else if y else para determinar si aplica un descuento del 10%, 15% o 20%. Al recibir el valor de la compra por parte del usuario se determina que % aplica, se multiplica el valor de compra por el porcentaje en decimal y al final se resta el valor de la compra con el producto de la operación anterior para así dar cuanto debe pagar en total el cliente. También se utiliza String.format("%.0f", ...) para mostrar los valores sin decimales y que aparezcan como cantidades enteras de pesos.
 
 **Ejercicio 2: Acceso a Conjunto Residencial**
-Para este código armé un sistema de filtros con if anidados. Uso next() del Scanner para leer las respuestas y equalsIgnoreCase() para que no importe si el usuario escribe en mayúsculas o minúsculas. El programa revisa primero si la persona tiene tarjeta. Solo si la tiene, pasa a preguntar si está activa y luego si tiene deudas, mostrando un mensaje específico de acceso denegado o permitido según el filtro en el que se detenga el usuario.
+El ejercicio consiste en controlar el acceso a un conjunto según tres condiciones: tener tarjeta, que esté activa y no tener deudas. El programa utiliza if anidados para revisar cada condición y determinar si el acceso es permitido o restringido. Si se cumple las 3 condiciones su acceso es permitido si no se cumple alguna de las 3 condiciones no puede acceder.También utiliza String para guardar respuestas de texto, nextLine() para leerlas y equals() para compararlas.
 
 **Ejercicio 3: Asignación de Conductor**
-En este caso guardé las tres condiciones del problema en variables booleanas independientes llamadas c1, c2 y c3 para mantener el código más limpio. Para asignar un conductor premium el condicional exige que las tres variables sean verdaderas usando el operador &&. Para el conductor estándar usé paréntesis y el operador || para agrupar las posibles combinaciones donde se cumplen al menos dos requisitos. Lo que no encaja ahí cae en el else final y no se le asigna conductor.
+El ejercicio consiste en asignar una categoría a un conductor dependiendo de si cumple ciertas condiciones. El programa solicita la calificación, la cantidad de viajes realizados y si el conductor está disponible. Si el usuario cumple con las 3 condiciones es conductor premium, si cumple 2 es conductor estandar sino entonces no puede ser asigando, mediante if, else if y else y la variable condiciones aumenta en 1.
 
 **Ejercicio 4: Crédito Bancario**
-La clave acá fue usar los tipos de datos correctos con el Scanner pidiendo los ingresos como double y los años o el puntaje como enteros. El flujo evalúa primero al cliente perfecto que cumple todo al mismo tiempo. Luego con un else if y operadores || se revisa si el cliente cumple dos de tres condiciones para darle un crédito condicionado. Si no logra cumplir ni siquiera dos, el flujo termina rechazando la solicitud por completo.
+El ejercicio consiste en evaluar si una persona puede recibir un crédito dependiendo de sus ingresos, puntaje crediticio y antigüedad laboral. Utilicé if, else if y else junto con los operadores lógicos && (AND) para si cumple las 3 condiciones para recibir su crédito y || (OR) para ver si cumple 2 condiciones para un crédito condicionado pero si no cumple ninguno se lleva su crédito. 
 
 **Ejercicio 5: Sistema de Aerolínea**
-Para evitar conflictos con los rangos de viajes, estructuré las categorías de mayor a menor jerarquía. Primero se evalúa la categoría Oro para los de más de 50 vuelos e incluye un if interno para dar el acceso VIP si superan los 70. La categoría Plata se maneja con un else if para el rango entre 20 y 50 vuelos. Para la categoría Básica definí una variable booleana que se vuelve verdadera si la persona tiene 20 vuelos o menos, o si no tiene la membresía activa, asegurando que nadie se quede sin categoría.
+El ejercicio consiste en clasificar a los pasajeros de una aerolínea según la cantidad de vuelos que han realizado durante el año y si tienen una membresía activa. Para realizar estas clasificaciones utilicé if anidados y operadores lógicos como &&, que permite comprobar que varias condiciones se cumplan al mismo tiempo. Se pregunta al usuario cuantos vuelos ha tomado durante el año si está entre 51 y 70 su categoría ORO pero no tiene acceso VIP (en el código me aseguré que se muestre si o no tiene acceso VIP) pero si es mayor a 70 tiene acceso VIP,  i sus vuelos está entre 21 y 50 es categoría PLATA sin acceso VIP, si tiene menos vuelos será categoría BÁSICA y menos tendrá acceso VIP.
 
 ### 4. Conclusiones
 
 **1. ¿Cuál es la principal diferencia entre ++variable y variable++?**
-La diferencia está en cuándo se hace el aumento. Con el preincremento (++variable) primero se le suma 1 a la variable y luego ese nuevo valor se usa en la línea de código actual. Con el posincremento (variable++) el programa primero lee y usa el valor original y justo después de terminar esa instrucción le suma el 1.
+La diferencia principal entre ambos operadores radica en el momento exacto en el que se realiza el incremento dentro de una instrucción o evaluación de código. Aunque ambos suman una unidad a la variable original, la forma en que el programa procesa la orden cambia por completo el valor que se utiliza en la expresión donde aparecen.
+
+En el caso del pre-incremento (++variable), el sistema modifica el valor de la variable antes de realizar cualquier otra acción. Primero le suma uno al dato almacenado y, de manera inmediata, utiliza ese nuevo valor para la operación actual, como una asignación o una comparación. Por esta razón, si guardas el resultado en otra variable, ambas terminarán teniendo la cifra ya actualizada.
+
+Por el contrario, el post-incremento (variable++) prioriza el valor original. El programa lee la cifra actual, la entrega para que se use en la línea de código presente y solo después de haber terminado esa tarea realiza la suma de una unidad. De este modo, si asignas este resultado a una nueva variable, esta conservará el valor antiguo mientras que la variable inicial cambiará a su valor incrementado.
 
 **2. ¿Qué estructura if considera más adecuada para situaciones complejas y por qué?**
-La mejor opción es combinar if else if con variables booleanas previas y condicionales anidados. Hacerlo así permite llevar un orden lógico desde la condición más estricta hasta la más general, el código queda mucho más fácil de leer y permite usar un else al final para atrapar los casos por descarte.
+Me parece que la estructura if anidada es adecuada para situaciones complejas porque permite evaluar varias condiciones de manera ordenada, donde una condición depende de que otra se cumpla primero
 
 **3. ¿Qué dificultades encontró durante el desarrollo?**
-Lo más complicado fue entender la jerarquía de los operadores lógicos y saber dónde poner los paréntesis para agrupar correctamente los && y los ||. También hubo detalles técnicos con el Scanner al momento de definir los tipos de variables correctos para no generar errores en consola, y fue un reto armar la lógica de los rangos para que los condicionales no chocaran entre sí.
+Hubo una situación en el ejercicio 3 o 4 donde utilizaba las condiciones+1 donde no me aceptaba una condición ya que con el "equals()" si el usuario no escribía lo mismo que estaba en el parentesis no me lo tomaba hasta que tuve que especificar en como debía escribirlo, también me enredaba con las llaves de los if-else if-else y con como se organizaban ya que en algunos casos ponía la condición en otro lugar al que yo requería y por eso no me daba los resultados solicitados.
 
 **4. ¿Qué aprendizajes obtuvo durante la actividad?**
-Comprendí que guardar las condiciones largas dentro de variables booleanas antes de armar el if ayuda mucho a simplificar la lectura del código. También aprendí que el orden en el que se escriben las estructuras importa bastante para que los filtros funcionen bien y que el bloque else sirve como un respaldo seguro para finalizar el flujo de un programa.
+Ahora sé como ubicar los if-else if-else, supe que significaban algunas variables como equals, String, Operadores lógicos entre otros, además ya podría hacer algo sencillos con condicionales sabiendo su estructura y como ubicarla.
