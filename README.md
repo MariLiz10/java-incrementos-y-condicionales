@@ -2,47 +2,37 @@
 Trabajo de POO
 # Taller 1: Operaadores de Incremento e Instrucciones condicionales en Java
 ## 1. Mi informacion
-* **Nombre Completo:** Sergio Alexander Murillo Puentes
+* **Nombre Completo:** Lizeth Mariana Cotrino Ossa
 * **Programa Académico:** Tecnologiaa en Desarrollo de Software
-* **Fecha de Entrega** 26 de Agosto de 2026
+* **Fecha de Entrega** 27 de Agosto de 2026
 ---
 ## 2. Objetivo de la Actividad
 
 Aplicar los conceptos de preincremento (`++variable`), posincremento (`variable++`) y las diferentes estructuras condicionales de Java mediante ejercicios prácticos.
 
-## 3. Parte 1: Investigación de Preincremento y Posincremento
-
-### Contexto de la Investigación
-Un desarrollador junior afirma que los operadores `++variable` y `variable++` producen exactamente el mismo resultado en cualquier situación dentro de Java. Como estudiante de programación, el objetivo de esta sección es verificar teórica y prácticamente si dicha afirmación es verdadera o falsa mediante pruebas de código y análisis de flujo de memoria.
-
----
-
-### Conceptos
+## 3.Conceptos breves
 
 #### 1. ¿Qué es un operador de incremento?
-Un operador de incremento en Java (`++`) es un **operador unario**, lo que significa que opera sobre un único operando o variable numérica (como `int`, `long`, `byte`, `short`, `float` o `double`). Su función principal es sumar de manera implícita una unidad (`+1`) al valor almacenado en dicha variable y actualizar directamente su contenido en la memoria RAM.
-
-A diferencia de una suma convencional (`a + 1`), el operador de incremento genera un efecto secundario (*side effect*) permanente sobre la variable original. Equivale sintácticamente a escribir `variable = variable + 1` o `variable += 1`, pero ofrece una notación más compacta y eficiente para el compilador.
+Un operador de incremento es aquel que permite aumentar el valor de una variable en 1. En Java se representa con ++. Por ejemplo, si tenemos int numero = 5; y escribimos numero++;, el valor de numero aumentará de 5 a 6.
 
 #### 2. ¿Qué diferencia existe entre preincremento y posincremento?
-Aunque ambos operadores terminan sumando 1 a la variable, la diferencia fundamental reside en el **orden de prioridad y temporización de la operación** dentro de la pila de ejecución (*evaluation stack*) de Java:
+La diferencia entre preincremento y posincremento está en el momento en que se realiza el aumento. El preincremento (++numero) aumenta primero el valor de la variable y después utiliza ese nuevo valor. Por ejemplo, si numero = 5 y escribimos int resultado = ++numero;, primero numero pasa a 6 y luego resultado recibe el valor 6.
 
-* **Preincremento (`++variable`):**
-  En esta variante, el operador antecede a la variable. Durante el ciclo de instrucción, Java realiza primero la modificación de la variable en memoria (incremento de +1) y, posteriormente, devuelve y utiliza el valor ya actualizado dentro de la expresión en la que se encuentra inscrita.
-
-* **Posincremento (`variable++`):**
-  En esta variante, el operador se coloca después de la variable. Durante la evaluación de la instrucción, Java crea temporalmente una copia del valor actual de la variable para ser utilizado dentro de la expresión actual y, una vez evaluada la línea o el punto de secuencia (*sequence point*), ejecuta el incremento de +1 en la variable original.
+En cambio, el posincremento (numero++) utiliza primero el valor actual de la variable y después lo aumenta. Por ejemplo, si numero = 5 y escribimos int resultado = numero++;, resultado recibe primero el valor 5 y después numero aumenta a 6.
 
 #### 3. ¿En qué situaciones producen resultados distintos?
-Los operadores de preincremento y posincremento arrojan resultados considerablemente diferentes en los siguientes escenarios:
+El preincremento y el posincremento producen resultados distintos cuando se utilizan dentro de una expresión o asignación, porque el momento del incremento cambia el valor que se utiliza. Por ejemplo, con ++x, si x vale 10, se utiliza 11; mientras que con x++, primero se utiliza 10 y después x pasa a valer 11. Por eso, la forma fácil de recordarlo es: preincremento = primero aumenta, posincremento = primero utiliza el valor.
 
-1. **En asignaciones compuestas:** Cuando el resultado del incremento se almacena inmediatamente en otra variable (por ejemplo, `b = ++a` frente a `b = a++`).
-2. **En expresiones aritméticas complejas:** Cuando la variable modificada forma parte de una fórmula matemática (por ejemplo, `(a++) * 5` frente a `(++a) * 5`).
-3. **Como argumentos de métodos o funciones:** Al pasar la variable como parámetro a un método como `System.out.println(a++)` frente a `System.out.println(++a)`. En el primer caso se imprime el valor antiguo y en el segundo el valor ya incrementado.
-4. **En evaluadores condicionales:** Dentro de estructuras `if` o ciclos `while`, donde la condición depende del estado inmediato de la variable (por ejemplo, `if (x++ > 5)` evalúa `x` antes del incremento, mientras que `if (++x > 5)` evalúa el valor ya modificado).
+#### 4. Estructuras condicionales
+Las estructuras condicionales en Java permiten que un programa tome decisiones dependiendo de si una condición se cumple o no.
 
-*Nota: Únicamente producen un resultado visualmente idéntico cuando se ejecutan como instrucciones independientes en una sola línea (por ejemplo, `i++;` frente a `++i;`) o en la cláusula de actualización de un ciclo `for`.*
-### 1. Evidencia de Ejecución
+La estructura if se utiliza para ejecutar una instrucción cuando una condición es verdadera. Por ejemplo, si una persona tiene más de 18 años, se puede mostrar un mensaje indicando que es mayor de edad.
+
+La estructura if - else permite elegir entre dos opciones: si la condición se cumple se ejecuta el if, y si no se cumple se ejecuta el else. Por ejemplo, si una nota es mayor o igual a 3, se muestra “Aprobado”; de lo contrario, “Reprobado”.
+
+La estructura if - else if - else permite evaluar varias condiciones. Por ejemplo, se puede clasificar una nota como “Excelente”, “Bueno” o “Insuficiente” dependiendo de su valor.
+
+Los if anidados son un if dentro de otro if. Se utilizan cuando una decisión depende de que primero se cumpla otra condición. Por ejemplo, primero comprobar si una persona es mayor de edad y después verificar si tiene una identificación.
 
 ![Evidencia de ejecución](Evidencias/captura1.png)
 ### Tabla Comparativa de Resultados (`Incrementos.java`)
@@ -112,7 +102,8 @@ Ahí se está guardando el valor en otra variable (`x = i++`), ni multiplicando 
 ## Parte 2. Programación con IF
 
 ### Ejercicio 1. Sistema de Descuentos para un Supermercado
-![Evidenca Del Primer Ejercicio](Evidencias/captura5.png)
+![Evidenca Del Primer Ejercicio](<img width="808" height="500" alt="EvidenciaEjercicio1" src="https://github.com/user-attachments/assets/0e01e041-d305-4835-8b8a-07a74a720b62" />
+)
 
 ### Ejercicio 2. Acceso a un Conjunto
 ![Evidenca Del Segundo Ejercicio](Evidencias/captura6.png)
