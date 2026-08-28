@@ -1,6 +1,6 @@
 # java-incrementos-y-condicionales
 Trabajo de POO
-# Taller 1: Operaadores de Incremento e Instrucciones condicionales en Java
+# Taller 1: Operadores de Incremento e Instrucciones condicionales en Java
 ## 1. Mi informacion
 * **Nombre Completo:** Lizeth Mariana Cotrino Ossa
 * **Programa Académico:** Tecnologiaa en Desarrollo de Software
@@ -51,9 +51,9 @@ d = 5
 ## Evidencias de los ejemplos adicionales
 ![Evidencia Asignación](Evidencias/Asignación.png)
 
-![Evidencia Operación Matemática](Evidencias/operación.png)
+![Evidencia Operación Matemática](Evidencias/Operación.png)
 
-![Evidencia Ciclo For](Evidencias/ciclofor.png)
+![Evidencia Ciclo For](Evidencias/ciclo for.png)
 ### 3. Conclusiones Sustentadas
 
 * **Verificación de la premisa:** La afirmación del desarrollador junior es **falsa**. Aunque ambos operadores le suman 1 a la variable en la memoria, no producen el mismo resultado cuando se usan dentro de asignaciones u operaciones compuestas.
