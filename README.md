@@ -37,54 +37,18 @@ Los if anidados son un if dentro de otro if. Se utilizan cuando una decisión de
 ![Evidencia de ejecución](Evidencias/captura1.png)
 ### Tabla Comparativa de Resultados (`Incrementos.java`)
 
-| Variable | Valor Inicial | Operación | Valor Impreso | Explicación Técnica |
-| :--- | :--- | :--- | :--- | :--- |
-| `a` | 5 | `b = ++a` | 6 | **Preincremento**: Se suma 1 a `a` en memoria antes de evaluar o asignar su valor. |
-| `b` | - | `b = ++a` | 6 | Recibe el valor de `a` ya modificado (6). |
-| `c` | 5 | `d = c++` | 6 | **Posincremento**: Incrementa a 6 en memoria después de entregar su valor original. |
-| `d` | - | `d = c++` | 5 | Recibe el valor previo de `c` (5) antes de que se ejecute la suma. |
+| Caso          | Valor inicial | Operador | Valor final de la variable | Valor asignado |
+| ------------- | ------------: | -------- | -------------------------: | -------------: |
+| Preincremento |         a = 5 | `++a`    |                      a = 6 |          b = 6 |
+| Posincremento |         c = 5 | `c++`    |                      c = 6 |          d = 5 |
 
----
-### 2. Ejemplos Adicionales de Pre/Posincremento
+Cuando se ejecuta
+a = 6
+b = 6
+c = 6
+d = 5
 
-2.1 EN UNA ASIGNACIÓN
-
-int x = 10;
-int y = ++x; // Preincremento: 'x' pasa a 11 primero; 'y' recibe 11.
-
-int m = 10;
-int n = m++; // Posincremento: 'n' recibe el 10 actual; luego 'm' pasa a 11.
-
-
- 2.2 EN UNA OPERACIÓN MATEMÁTICA
-
-int p = 4;
-int resultado1 = (++p) * 2; // Preincremento: sube a 5 antes de multiplicar (5 * 2 = 10)
-
-int q = 4;
-int resultado2 = (q++) * 2; // Posincremento: multiplica con 4 (4 * 2 = 8), luego 'q' pasa a 5
-
-
-
- 2.3 DENTRO DE UN CICLO DE CONTROL (FOR)
-
-for (int i = 0; i < 3; i++) {
-    System.out.println("Vuelta: " + i); // El incremento corre aislado al final de cada vuelta
-}
-
-**¿Por qué en el ciclo `for` da lo mismo `i++` que `++i`?**
-
-Para entenderlo, miremos el orden en el que Java ejecuta un ciclo `for` en cada vuelta:
-
-1. **Revisa la condición:** ¿`i < 3`?
-2. **Ejecuta el código interno:** Imprime el mensaje en pantalla.
-3. **Ejecuta el incremento:** Corre la parte de `i++` o `++i`.
-
-La clave está en el **paso 3**. El incremento en el `for` se ejecuta como una **instrucción completamente sola y aislada** al final de la vuelta. 
-
-Ahí se está guardando el valor en otra variable (`x = i++`), ni multiplicando (`i++ * 2`), ni imprimiéndolo directo en pantalla (`println(i++)`). Como nadie está "atrapando" o usando el valor justo en el milisegundo en que se hace la suma, la diferencia entre *"sumar antes"* o *"sumar después"* desaparece.
-### Evidencias de los Ejemplos Adicionales
-
+## Evidencias de los ejemplos adicionales
 ![Evidencia Asignación](Evidencias/captura2.png)
 
 ![Evidencia Operación Matemática](Evidencias/captura3.png)
@@ -96,7 +60,6 @@ Ahí se está guardando el valor en otra variable (`x = i++`), ni multiplicando 
 * **Evidencia en la ejecución:** En las pruebas realizadas con valor inicial de 5, la salida de la consola confirmó la diferencia de tiempos:
   * `b = 6` con `b = ++a`: El preincremento sumó 1 a la variable **antes** de guardar el valor en `b`.
   * `d = 5` con `d = c++`: El posincremento entregó el valor original a `d` y **después** realizó la suma en memoria.
-* **Impacto en el desarrollo:** Comprender esta diferencia es clave para evitar fallos lógicos en el código. Usar el operador equivocado no produce un error de sintaxis en NetBeans, pero hace que los cálculos o los condicionales procesen datos incorrectos, dandonos errores (bugs) dificiles de rastrear o capaces de generarnos problemas al llevarlos a un proyecto mas grande.
 ---
 
 ## Parte 2. Programación con IF
