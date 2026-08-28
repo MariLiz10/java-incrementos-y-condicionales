@@ -51,9 +51,9 @@ d = 5
 ## Evidencias de los ejemplos adicionales
 ![Evidencia Asignación](Evidencias/Asignación.png)
 
-![Evidencia Operación Matemática](Evidencias/captura3.png)
+![Evidencia Operación Matemática](Evidencias/operación.png)
 
-![Evidencia Ciclo For](Evidencias/captura4.png)
+![Evidencia Ciclo For](Evidencias/ciclofor.png)
 ### 3. Conclusiones Sustentadas
 
 * **Verificación de la premisa:** La afirmación del desarrollador junior es **falsa**. Aunque ambos operadores le suman 1 a la variable en la memoria, no producen el mismo resultado cuando se usan dentro de asignaciones u operaciones compuestas.
@@ -65,18 +65,18 @@ d = 5
 ## Parte 2. Programación con IF
 
 ### Ejercicio 1. Sistema de Descuentos para un Supermercado
-![Evidenca Del Primer Ejercicio]()
+![Evidencia Del Primer Ejercicio](Evidencias/EvidenciaEjercicio1.png)
 
 ### Ejercicio 2. Acceso a un Conjunto
-![Evidenca Del Segundo Ejercicio](Evidencias/captura6.png)
+![Evidencia Del Segundo Ejercicio](Evidencias/EvidenciaEjercicio2.png)
 
 ### Ejercicio 3. Plataforma de Transporte
-![Evidenca Del Tercer Ejercicio](Evidencias/captura7.png)
+![Evidencia Del Tercer Ejercicio](Evidencias/EvidenciaEjercicio3.png)
 
-### Ejercicio 4. Credito Bancario
-![Evidenca Del Cuarto Ejercicio](Evidencias/captura8.png)
-### Ejercicio 5. Siatema de viajes de una Aerolíena
-![Evidenca Del  Quinto Ejercicio](Evidencias/captura9.png)
+### Ejercicio 4. Crédito Bancario
+![Evidencia Del Cuarto Ejercicio](Evidencias/EvidenciaEjercicio4.png)
+### Ejercicio 5. Sistema de viajes de una Aerolínea
+![Evidencia Del  Quinto Ejercicio](Evidencias/EvidenciaEjercicio5.png)
 
 ### Parte 3. Explicación de los resultados
 
