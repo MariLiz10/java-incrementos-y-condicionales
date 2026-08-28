@@ -34,7 +34,7 @@ La estructura if - else if - else permite evaluar varias condiciones. Por ejempl
 
 Los if anidados son un if dentro de otro if. Se utilizan cuando una decisión depende de que primero se cumpla otra condición. Por ejemplo, primero comprobar si una persona es mayor de edad y después verificar si tiene una identificación.
 
-![Evidencia de ejecución](Evidencias/captura1.png)
+![Evidencia de ejecución](Evidencias/taller1.png)
 ### Tabla Comparativa de Resultados (`Incrementos.java`)
 
 | Caso          | Valor inicial | Operador | Valor final de la variable | Valor asignado |
