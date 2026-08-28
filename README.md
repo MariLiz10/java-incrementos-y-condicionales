@@ -53,7 +53,7 @@ d = 5
 
 ![Evidencia Operación Matemática](Evidencias/Operación.png)
 
-![Evidencia Ciclo For](Evidencias/ciclo for.png)
+![Evidencia Ciclo For](Evidencias/ciclofor.png)
 ### 3. Conclusiones Sustentadas
 
 * **Verificación de la premisa:** La afirmación del desarrollador junior es **falsa**. Aunque ambos operadores le suman 1 a la variable en la memoria, no producen el mismo resultado cuando se usan dentro de asignaciones u operaciones compuestas.
