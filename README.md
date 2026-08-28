@@ -49,7 +49,7 @@ c = 6
 d = 5
 
 ## Evidencias de los ejemplos adicionales
-![Evidencia Asignación](Evidencias/captura2.png)
+![Evidencia Asignación](Evidencias/Asignación.png)
 
 ![Evidencia Operación Matemática](Evidencias/captura3.png)
 
